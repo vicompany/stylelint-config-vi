@@ -15,7 +15,7 @@ Create a [`.stylelintrc.js`](http://stylelint.io/user-guide/configuration/#confi
 ### .stylelintrc.js
 ```js
 module.exports = {
-  extends: 'vi'
+  extends: 'stylelint-config-vi'
 };
 ```
 
