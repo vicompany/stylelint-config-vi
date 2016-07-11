@@ -340,7 +340,7 @@ module.exports = {
 		'no-indistinguishable-colors': null, // Disabled because of: https://github.com/SlexAxton/css-colorguard/issues/32
 		'no-invalid-double-slash-comments': true,
 		'no-missing-eof-newline': true,
-		'no-unknown-animations': true,
+		'no-unknown-animations': false,
 		'no-unsupported-browser-features': null // Disabled because it does not understand 'progressive enhancement' and it's slow
 	}
 };
