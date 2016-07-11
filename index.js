@@ -279,7 +279,7 @@ module.exports = {
 		'selector-no-combinator': null,
 		'selector-no-id': true,
 		'selector-no-qualifying-type': [true, {
-			ignore: ['class', 'attribute']
+			ignore: ['attribute']
 		}],
 		'selector-no-type': null, // TODO: only allow in 'base' files
 		'selector-no-universal': true,
