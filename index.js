@@ -230,13 +230,15 @@ module.exports = {
 		'media-feature-colon-space-before': 'never',
 		'media-feature-name-no-vendor-prefix': true,
 		'media-feature-no-missing-punctuation': true,
+		'media-feature-parentheses-space-inside': 'never',
 		'media-feature-range-operator-space-after': 'always',
 		'media-feature-range-operator-space-before': 'always',
+
+		// Media query list - http://stylelint.io/user-guide/rules/#media-query-list
 		'media-query-list-comma-newline-after': 'always-multi-line',
 		'media-query-list-comma-newline-before': 'never-multi-line',
 		'media-query-list-comma-space-after': 'always-single-line',
 		'media-query-list-comma-space-before': 'never',
-		'media-query-parentheses-space-inside': 'never',
 
 		// Number - http://stylelint.io/user-guide/rules/#number
 		'number-leading-zero': 'always',
