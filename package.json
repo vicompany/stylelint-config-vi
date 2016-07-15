@@ -19,5 +19,9 @@
   "author": "VI Company",
   "license": "MIT",
   "bugs": "https://github.com/vicompany/stylelint-config-vi/issues",
-  "homepage": "https://github.com/vicompany/stylelint-config-vi"
+  "homepage": "https://github.com/vicompany/stylelint-config-vi",
+  "devDependencies": {
+    "eslint": "^3.0.1",
+    "eslint-config-vi": "^1.0.1"
+  }
 }
