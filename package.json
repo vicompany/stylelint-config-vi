@@ -4,7 +4,9 @@
   "description": "Stylelint shareable config used by VI Company",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --quiet **/*.js",
+    "pretest": "npm run lint",
+    "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "postversion": "git push && git push --tags"
   },
   "repository": {
@@ -21,7 +23,12 @@
   "bugs": "https://github.com/vicompany/stylelint-config-vi/issues",
   "homepage": "https://github.com/vicompany/stylelint-config-vi",
   "devDependencies": {
-    "eslint": "^3.0.1",
-    "eslint-config-vi": "^1.0.1"
+    "eslint": "^3.1.1",
+    "eslint-config-vi": "^1.0.1",
+    "jasmine": "^2.4.1",
+    "stylelint": "^7.0.3"
+  },
+  "peerDependencies": {
+    "stylelint": "^7.0.3"
   }
 }

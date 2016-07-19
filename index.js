@@ -3,8 +3,7 @@ module.exports = {
 		// At-rule - http://stylelint.io/user-guide/rules/#at-rule
 		'at-rule-blacklist': null,
 		'at-rule-empty-line-before': ['always', {
-			except: ['blockless-group', 'first-nested'],
-			ignore: ['after-comment'],
+			ignore: ['after-comment', 'blockless-group', 'all-nested'],
 			ignoreAtRules: ['else']
 		}],
 		'at-rule-name-case': 'lower',
@@ -259,9 +258,8 @@ module.exports = {
 			except: ['first-nested'],
 			ignore: ['after-comment']
 		}],
-		'rule-non-nested-empty-line-before': ['always', {
-			ignore: ['after-comment'],
-			except: ['after-single-line-comment']
+		'rule-non-nested-empty-line-before': ['always-multi-line', {
+			ignore: ['after-comment']
 		}],
 
 		// Selector - http://stylelint.io/user-guide/rules/#selector

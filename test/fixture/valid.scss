@@ -1,0 +1,119 @@
+@charset 'utf-8';
+
+@import 'variables';
+
+// Variables
+$dark: #333;
+$light: #ffc;
+$typeface: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */ // https://github.com/vicompany/stylelint-config-vi/issues/3
+
+// Global styling
+html {
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+
+* { /* stylelint-disable-line selector-no-universal */
+	&,
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font: 1rem/1.5 $typeface;
+}
+
+// Selectors
+.selector-1,
+.selector-2,
+.selector-3[type='text'] {
+	position: relative;
+	box-sizing: border-box;
+	display: block;
+
+	color: $dark;
+	background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+}
+
+// Nesting selectors and pseudo classes
+.selector-1 {
+	&:focus {
+		border: solid 1px $dark;
+	}
+
+	&:hover {
+		color: $light;
+	}
+
+	> button {
+		margin: 0;
+
+		.label {
+			text-align: center;
+		}
+	}
+}
+
+// Pseudo elements
+.selector-2 {
+	&:before {
+		position: absolute;
+		left: 0;
+		content: '';
+	}
+
+	&:after {
+		background-image: url('x.svg');
+		content: '→';
+	}
+}
+
+.selector-a,
+.selector-b:not(:first-child) {
+	top: calc(calc(1rem * 2) / 3);
+	padding: 0.5rem;
+}
+
+// Single line selectors
+// Only allow one property and they don't require a newline
+.selector-x { width: 10%; }
+.selector-y { width: 20%; }
+.selector-z { width: 30%; }
+
+// Multi line values
+.selector-amaze {
+	background-image: repeating-linear-gradient(
+		-45deg,
+		transparent,
+		#fff 25px,
+		rgba(255, 255, 255, 1) 50px
+	);
+
+	box-shadow: 0 1px 1px $dark,
+		0 1px 0 $light,
+		2px 2px 1px 1px rgba(0, 0, 0, 0.5) inset;
+}
+
+// Media queries
+@media (min-width: 35rem) {
+	.selector-1 {
+		transform: translate(1, 1) scale(3);
+	}
+}
+
+@media (min-width: 35rem) and (orientation: landscape) {
+	.selector-2 {
+		min-height: 0;
+	}
+}
+
+@media not screen and (color), print and (color) {
+	.selector-3 {
+		padding: 0.5rem;
+	}
+}
