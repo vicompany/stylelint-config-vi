@@ -40,7 +40,7 @@ body {
 	background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 
-// Nesting selectors and pseudo classes
+// Pseudo classes
 .selector-1 {
 	&:focus {
 		border: solid 1px $dark;
@@ -48,14 +48,6 @@ body {
 
 	&:hover {
 		color: $light;
-	}
-
-	> button {
-		margin: 0;
-
-		.label {
-			text-align: center;
-		}
 	}
 }
 
@@ -70,6 +62,19 @@ body {
 	&:after {
 		background-image: url('x.svg');
 		content: '→';
+	}
+}
+
+// Nesting and chaining selectors
+.nav {
+	> .btn {
+		margin: 0;
+	}
+
+	&.is-visible {
+		> .btn {
+			margin: 2rem 1rem;
+		}
 	}
 }
 
