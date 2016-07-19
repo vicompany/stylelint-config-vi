@@ -104,6 +104,12 @@ body {
 		2px 2px 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
 
+// Animations
+// Allow unknown animations because we often use separate files.
+.slide {
+	animation: fancy-slide 2s linear;
+}
+
 // Media queries
 @media (min-width: 35rem) {
 	.selector-1 {
