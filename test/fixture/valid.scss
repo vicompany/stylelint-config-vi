@@ -2,9 +2,31 @@
 
 @import 'variables';
 
-// Some variables
+// Variables
 $dark: #333;
 $light: #ffc;
+$typeface: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */ // https://github.com/vicompany/stylelint-config-vi/issues/3
+
+// Global styling
+html {
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+
+* { /* stylelint-disable-line selector-no-universal */
+	&,
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font: 1rem/1.5 $typeface;
+}
 
 // Selectors
 .selector-1,
@@ -62,6 +84,9 @@ $light: #ffc;
 .selector-x { width: 10%; }
 .selector-y { width: 20%; }
 .selector-z { width: 30%; }
+
+// Media queries
+
 
 /*
 // Single-line comment
