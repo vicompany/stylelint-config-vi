@@ -7,6 +7,7 @@
     "lint": "eslint --quiet **/*.js",
     "pretest": "npm run lint",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
+    "preversion": "npm test",
     "postversion": "git push && git push --tags"
   },
   "repository": {
