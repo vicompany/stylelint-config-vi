@@ -13,13 +13,15 @@ describe('SCSS', () => {
 			stylelint.lint({
 				config,
 				code: scss,
-				syntax: 'scss'
+				syntax: 'scss',
+				formatter: 'string'
 			})
 			.then((data) => {
-				let { errored, results } = data;
+				let { output, errored, results } = data;
 				let { warnings } = results[0];
 
-				// console.log(warnings);
+				// Show (error) output in Travis/console
+				console.log(output);
 
 				expect(errored).toBe(false);
 				expect(warnings.length).toBe(0);
