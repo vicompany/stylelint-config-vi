@@ -1,4 +1,4 @@
-# eslint-config-vi
+# stylelint-config-vi
 
 [![Build Status](https://travis-ci.org/vicompany/stylelint-config-vi.svg?branch=master)](https://travis-ci.org/vicompany/stylelint-config-vi)
 
