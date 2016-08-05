@@ -47,7 +47,6 @@ module.exports = {
 
 		// Custom property - http://stylelint.io/user-guide/rules/#custom-property
 		'custom-property-empty-line-before': null,
-		'custom-media-pattern': null,
 		'custom-property-no-outside-root': true,
 		'custom-property-pattern': null,
 
@@ -238,6 +237,9 @@ module.exports = {
 		'media-feature-range-operator-space-after': 'always',
 		'media-feature-range-operator-space-before': 'always',
 
+		// Custom media - http://stylelint.io/user-guide/rules/#custom-media
+		'custom-media-pattern': null,
+
 		// Media query list - http://stylelint.io/user-guide/rules/#media-query-list
 		'media-query-list-comma-newline-after': 'always-multi-line',
 		'media-query-list-comma-newline-before': 'never-multi-line',
@@ -252,6 +254,7 @@ module.exports = {
 		// Property - http://stylelint.io/user-guide/rules/#property
 		'property-blacklist': null,
 		'property-case': 'lower',
+		'property-no-unknown': true,
 		'property-no-vendor-prefix': true,
 		'property-whitelist': null,
 

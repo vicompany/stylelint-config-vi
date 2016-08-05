@@ -28,6 +28,11 @@ body {
 	font: 1rem/1.5 $typeface;
 }
 
+.btn {
+	appearance: none;
+	contain: content; /* stylelint-disable-line property-no-unknown */
+}
+
 // Selectors
 .selector-1,
 .selector-2,
