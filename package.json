@@ -27,9 +27,9 @@
     "eslint": "^3.1.1",
     "eslint-config-vi": "^1.0.1",
     "jasmine": "^2.4.1",
-    "stylelint": "^7.0.3"
+    "stylelint": "^7.1.0"
   },
   "peerDependencies": {
-    "stylelint": "^7.0.3"
+    "stylelint": "^7.1.0"
   }
 }

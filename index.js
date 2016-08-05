@@ -15,6 +15,7 @@ module.exports = {
 		'at-rule-whitelist': null,
 
 		// Block - http://stylelint.io/user-guide/rules/#block
+		'block-closing-brace-empty-line-before': 'never',
 		'block-closing-brace-newline-after': ['always', {
 			ignoreAtRules: ['if', 'else']
 		}],
@@ -36,6 +37,7 @@ module.exports = {
 		'color-no-invalid-hex': true,
 
 		// Comment - http://stylelint.io/user-guide/rules/#comment
+		'comment-no-empty': true,
 		'comment-empty-line-before': null,
 		'comment-whitespace-inside': 'always',
 		'comment-word-blacklist': null,
@@ -44,6 +46,7 @@ module.exports = {
 		'stylelint-disable-reason': null,
 
 		// Custom property - http://stylelint.io/user-guide/rules/#custom-property
+		'custom-property-empty-line-before': null,
 		'custom-media-pattern': null,
 		'custom-property-no-outside-root': true,
 		'custom-property-pattern': null,
@@ -54,6 +57,7 @@ module.exports = {
 		'declaration-colon-newline-after': null,
 		'declaration-colon-space-after': 'always',
 		'declaration-colon-space-before': 'never',
+		'declaration-empty-line-before': null,
 		'declaration-no-important': true,
 		'declaration-property-unit-blacklist': {
 			'font-size': ['px'],
@@ -227,6 +231,7 @@ module.exports = {
 		// Media feature - http://stylelint.io/user-guide/rules/#media-feature
 		'media-feature-colon-space-after': 'always',
 		'media-feature-colon-space-before': 'never',
+		'media-feature-name-case': 'lower',
 		'media-feature-name-no-vendor-prefix': true,
 		'media-feature-no-missing-punctuation': true,
 		'media-feature-parentheses-space-inside': 'never',
@@ -275,6 +280,7 @@ module.exports = {
 		'selector-max-compound-selectors': 3,
 		'selector-max-empty-lines': 0,
 		'selector-max-specificity': null, // TODO
+		'selector-nested-pattern': null,
 		'selector-no-attribute': null,
 		'selector-no-combinator': null,
 		'selector-no-id': true,
@@ -284,9 +290,11 @@ module.exports = {
 		'selector-no-type': null, // TODO: only allow in 'base' files
 		'selector-no-universal': true,
 		'selector-no-vendor-prefix': true,
+		'selector-pseudo-class-blacklist': null,
 		'selector-pseudo-class-case': 'lower',
 		'selector-pseudo-class-no-unknown': true,
 		'selector-pseudo-class-parentheses-space-inside': 'never',
+		'selector-pseudo-class-whitelist': null,
 		'selector-pseudo-element-case': 'lower',
 		'selector-pseudo-element-colon-notation': 'single',
 		'selector-pseudo-element-no-unknown': true,
