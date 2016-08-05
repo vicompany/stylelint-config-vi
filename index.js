@@ -1,33 +1,5 @@
 module.exports = {
 	rules: {
-		// At-rule - http://stylelint.io/user-guide/rules/#at-rule
-		'at-rule-blacklist': null,
-		'at-rule-empty-line-before': ['always', {
-			ignore: ['after-comment', 'blockless-group', 'all-nested'],
-			ignoreAtRules: ['else']
-		}],
-		'at-rule-name-case': 'lower',
-		'at-rule-name-newline-after': null,
-		'at-rule-name-space-after': 'always-single-line',
-		'at-rule-no-unknown': null, // Disabled because of errors on @mixin, @if, etc: https://github.com/stylelint/stylelint/issues/1515
-		'at-rule-no-vendor-prefix': true,
-		'at-rule-semicolon-newline-after': 'always',
-		'at-rule-whitelist': null,
-
-		// Block - http://stylelint.io/user-guide/rules/#block
-		'block-closing-brace-empty-line-before': 'never',
-		'block-closing-brace-newline-after': ['always', {
-			ignoreAtRules: ['if', 'else']
-		}],
-		'block-closing-brace-newline-before': 'always-multi-line',
-		'block-closing-brace-space-after': null,
-		'block-closing-brace-space-before': 'always-single-line',
-		'block-no-empty': true,
-		'block-no-single-line': null,
-		'block-opening-brace-newline-after': 'always-multi-line',
-		'block-opening-brace-newline-before': null,
-		'block-opening-brace-space-after': 'always-single-line',
-		'block-opening-brace-space-before': 'always',
 
 		// Color - http://stylelint.io/user-guide/rules/#color
 		'color-hex-case': 'lower', // 'upper',
@@ -36,19 +8,78 @@ module.exports = {
 		'color-no-hex': null,
 		'color-no-invalid-hex': true,
 
-		// Comment - http://stylelint.io/user-guide/rules/#comment
-		'comment-no-empty': true,
-		'comment-empty-line-before': null,
-		'comment-whitespace-inside': 'always',
-		'comment-word-blacklist': null,
+		// Font - http://stylelint.io/user-guide/rules/#font-family
+		'font-family-name-quotes': 'always-where-recommended',
 
-		// Disable comment - http://stylelint.io/user-guide/rules/#stylelint-disable-comment
-		'stylelint-disable-reason': null,
+		// Font-weight - http://stylelint.io/user-guide/rules/#font-weight
+		'font-weight-notation': 'named-where-possible',
+
+		// Function - http://stylelint.io/user-guide/rules/#function
+		'function-blacklist': null,
+		'function-calc-no-unspaced-operator': true,
+		'function-comma-newline-after': 'always-multi-line',
+		'function-comma-newline-before': 'never-multi-line',
+		'function-comma-space-after': 'always-single-line',
+		'function-comma-space-before': 'never',
+		'function-linear-gradient-no-nonstandard-direction': true,
+		'function-max-empty-lines': 0,
+		'function-name-case': 'lower',
+		'function-parentheses-newline-inside': 'always-multi-line',
+		'function-parentheses-space-inside': 'never-single-line',
+		'function-url-data-uris': 'never',
+		'function-url-no-scheme-relative': true,
+		'function-url-quotes': 'always',
+		'function-whitelist': null,
+		'function-whitespace-after': 'always',
+
+		// Number - http://stylelint.io/user-guide/rules/#number
+		'number-leading-zero': 'always',
+		'number-max-precision': 3,
+		'number-no-trailing-zeros': true,
+
+		// String
+		'string-no-newline': true,
+		'string-quotes': 'single',
+
+		// Length - http://stylelint.io/user-guide/rules/#length
+		'length-zero-no-unit': true,
+
+		// Time - http://stylelint.io/user-guide/rules/#time
+		'time-no-imperceptible': true,
+
+		// Unit - http://stylelint.io/user-guide/rules/#unit
+		'unit-blacklist': ['mm', 'q', 'cm', 'in', 'pt', 'pc'],
+		'unit-case': 'lower',
+		'unit-no-unknown': true,
+		'unit-whitelist': null,
+
+		// Value - http://stylelint.io/user-guide/rules/#value
+		'value-keyword-case': 'lower',
+		'value-no-vendor-prefix': true,
+
+		// Value list - http://stylelint.io/user-guide/rules/#value-list
+		'value-list-comma-newline-after': 'always-multi-line',
+		'value-list-comma-newline-before': 'never-multi-line',
+		'value-list-comma-space-after': 'always-single-line',
+		'value-list-comma-space-before': 'never',
 
 		// Custom property - http://stylelint.io/user-guide/rules/#custom-property
 		'custom-property-empty-line-before': null,
 		'custom-property-no-outside-root': true,
 		'custom-property-pattern': null,
+
+		// Shorthand property - http://stylelint.io/user-guide/rules/#shorthand-property
+		'shorthand-property-no-redundant-values': true,
+
+		// Property - http://stylelint.io/user-guide/rules/#property
+		'property-blacklist': null,
+		'property-case': 'lower',
+		'property-no-unknown': true,
+		'property-no-vendor-prefix': true,
+		'property-whitelist': null,
+
+		// Keyframe declaration - http://stylelint.io/user-guide/rules/#keyframe-declaration
+		'keyframe-declaration-no-important': true,
 
 		// Declaration - http://stylelint.io/user-guide/rules/#declaration
 		'declaration-bang-space-after': 'never',
@@ -200,75 +231,20 @@ module.exports = {
 		'declaration-block-single-line-max-declarations': 1,
 		'declaration-block-trailing-semicolon': 'always',
 
-		// Font - http://stylelint.io/user-guide/rules/#font-family
-		'font-family-name-quotes': 'always-where-recommended',
-		'font-weight-notation': 'named-where-possible',
-
-		// Function - http://stylelint.io/user-guide/rules/#function
-		'function-blacklist': null,
-		'function-calc-no-unspaced-operator': true,
-		'function-comma-newline-after': 'always-multi-line',
-		'function-comma-newline-before': 'never-multi-line',
-		'function-comma-space-after': 'always-single-line',
-		'function-comma-space-before': 'never',
-		'function-linear-gradient-no-nonstandard-direction': true,
-		'function-max-empty-lines': 0,
-		'function-name-case': 'lower',
-		'function-parentheses-newline-inside': 'always-multi-line',
-		'function-parentheses-space-inside': 'never-single-line',
-		'function-url-data-uris': 'never',
-		'function-url-quotes': 'always',
-		'function-whitelist': null,
-		'function-whitespace-after': 'always',
-
-		// Keyframe declaration - http://stylelint.io/user-guide/rules/#keyframe-declaration
-		'keyframe-declaration-no-important': true,
-
-		// Length - http://stylelint.io/user-guide/rules/#length
-		'length-zero-no-unit': true,
-
-		// Media feature - http://stylelint.io/user-guide/rules/#media-feature
-		'media-feature-colon-space-after': 'always',
-		'media-feature-colon-space-before': 'never',
-		'media-feature-name-case': 'lower',
-		'media-feature-name-no-vendor-prefix': true,
-		'media-feature-no-missing-punctuation': true,
-		'media-feature-parentheses-space-inside': 'never',
-		'media-feature-range-operator-space-after': 'always',
-		'media-feature-range-operator-space-before': 'always',
-
-		// Custom media - http://stylelint.io/user-guide/rules/#custom-media
-		'custom-media-pattern': null,
-
-		// Media query list - http://stylelint.io/user-guide/rules/#media-query-list
-		'media-query-list-comma-newline-after': 'always-multi-line',
-		'media-query-list-comma-newline-before': 'never-multi-line',
-		'media-query-list-comma-space-after': 'always-single-line',
-		'media-query-list-comma-space-before': 'never',
-
-		// Number - http://stylelint.io/user-guide/rules/#number
-		'number-leading-zero': 'always',
-		'number-max-precision': 3,
-		'number-no-trailing-zeros': true,
-
-		// Property - http://stylelint.io/user-guide/rules/#property
-		'property-blacklist': null,
-		'property-case': 'lower',
-		'property-no-unknown': true,
-		'property-no-vendor-prefix': true,
-		'property-whitelist': null,
-
-		// Root - http://stylelint.io/user-guide/rules/#root-rule
-		'root-no-standard-properties': true,
-
-		// Rule - http://stylelint.io/user-guide/rules/#rule
-		'rule-nested-empty-line-before': ['always', {
-			except: ['first-nested'],
-			ignore: ['after-comment']
+		// Block - http://stylelint.io/user-guide/rules/#block
+		'block-closing-brace-empty-line-before': 'never',
+		'block-closing-brace-newline-after': ['always', {
+			ignoreAtRules: ['if', 'else']
 		}],
-		'rule-non-nested-empty-line-before': ['always-multi-line', {
-			ignore: ['after-comment']
-		}],
+		'block-closing-brace-newline-before': 'always-multi-line',
+		'block-closing-brace-space-after': null,
+		'block-closing-brace-space-before': 'always-single-line',
+		'block-no-empty': true,
+		'block-no-single-line': null,
+		'block-opening-brace-newline-after': 'always-multi-line',
+		'block-opening-brace-newline-before': null,
+		'block-opening-brace-space-after': 'always-single-line',
+		'block-opening-brace-space-before': 'always',
 
 		// Selector - http://stylelint.io/user-guide/rules/#selector
 		'selector-attribute-brackets-space-inside': 'never',
@@ -311,31 +287,59 @@ module.exports = {
 		'selector-list-comma-space-after': 'always-single-line',
 		'selector-list-comma-space-before': 'never',
 
-		// Shorthand property - http://stylelint.io/user-guide/rules/#shorthand-property
-		'shorthand-property-no-redundant-values': true,
+		// Root rule - http://stylelint.io/user-guide/rules/#root-rule
+		'root-no-standard-properties': true,
 
-		// String
-		'string-no-newline': true,
-		'string-quotes': 'single',
+		// Rule - http://stylelint.io/user-guide/rules/#rule
+		'rule-nested-empty-line-before': ['always', {
+			except: ['first-nested'],
+			ignore: ['after-comment']
+		}],
+		'rule-non-nested-empty-line-before': ['always-multi-line', {
+			ignore: ['after-comment']
+		}],
 
-		// Time - http://stylelint.io/user-guide/rules/#time
-		'time-no-imperceptible': true,
+		// Media feature - http://stylelint.io/user-guide/rules/#media-feature
+		'media-feature-colon-space-after': 'always',
+		'media-feature-colon-space-before': 'never',
+		'media-feature-name-case': 'lower',
+		'media-feature-name-no-vendor-prefix': true,
+		'media-feature-no-missing-punctuation': true,
+		'media-feature-parentheses-space-inside': 'never',
+		'media-feature-range-operator-space-after': 'always',
+		'media-feature-range-operator-space-before': 'always',
 
-		// Unit - http://stylelint.io/user-guide/rules/#unit
-		'unit-blacklist': ['mm', 'q', 'cm', 'in', 'pt', 'pc'],
-		'unit-case': 'lower',
-		'unit-no-unknown': true,
-		'unit-whitelist': null,
+		// Custom media - http://stylelint.io/user-guide/rules/#custom-media
+		'custom-media-pattern': null,
 
-		// Value - http://stylelint.io/user-guide/rules/#value
-		'value-keyword-case': 'lower',
-		'value-no-vendor-prefix': true,
+		// Media query list - http://stylelint.io/user-guide/rules/#media-query-list
+		'media-query-list-comma-newline-after': 'always-multi-line',
+		'media-query-list-comma-newline-before': 'never-multi-line',
+		'media-query-list-comma-space-after': 'always-single-line',
+		'media-query-list-comma-space-before': 'never',
 
-		// Value list - http://stylelint.io/user-guide/rules/#value-list
-		'value-list-comma-newline-after': 'always-multi-line',
-		'value-list-comma-newline-before': 'never-multi-line',
-		'value-list-comma-space-after': 'always-single-line',
-		'value-list-comma-space-before': 'never',
+		// At-rule - http://stylelint.io/user-guide/rules/#at-rule
+		'at-rule-blacklist': null,
+		'at-rule-empty-line-before': ['always', {
+			ignore: ['after-comment', 'blockless-group', 'all-nested'],
+			ignoreAtRules: ['else']
+		}],
+		'at-rule-name-case': 'lower',
+		'at-rule-name-newline-after': null,
+		'at-rule-name-space-after': 'always-single-line',
+		'at-rule-no-unknown': null, // Disabled because of errors on @mixin, @if, etc: https://github.com/stylelint/stylelint/issues/1515
+		'at-rule-no-vendor-prefix': true,
+		'at-rule-semicolon-newline-after': 'always',
+		'at-rule-whitelist': null,
+
+		// stylelint-disable Comment - http://stylelint.io/user-guide/rules/#stylelint-disable-comment
+		'stylelint-disable-reason': null,
+
+		// Comment - http://stylelint.io/user-guide/rules/#comment
+		'comment-no-empty': true,
+		'comment-empty-line-before': null,
+		'comment-whitespace-inside': 'always',
+		'comment-word-blacklist': null,
 
 		// General / Sheet - http://stylelint.io/user-guide/rules/#general--sheet
 		'indentation': 'tab',
