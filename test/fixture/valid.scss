@@ -133,3 +133,14 @@ body {
 		padding: 0.5rem;
 	}
 }
+
+// CSS fallback duplicate properties
+// Allow "consecutive-duplicates-with-different-values"
+// http://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/
+.nav--main {
+	position: fixed;
+	position: absolute; // For older (mobile) browsers
+
+	top: 0;
+	left: 0;
+}

@@ -29,6 +29,7 @@ module.exports = {
 		'function-url-data-uris': 'never',
 		'function-url-no-scheme-relative': true,
 		'function-url-quotes': 'always',
+		'function-url-scheme-whitelist': null,
 		'function-whitelist': null,
 		'function-whitespace-after': 'always',
 
@@ -62,6 +63,7 @@ module.exports = {
 		'value-list-comma-newline-before': 'never-multi-line',
 		'value-list-comma-space-after': 'always-single-line',
 		'value-list-comma-space-before': 'never',
+		'value-list-max-empty-lines': 0,
 
 		// Custom property - http://stylelint.io/user-guide/rules/#custom-property
 		'custom-property-empty-line-before': null,
@@ -98,8 +100,11 @@ module.exports = {
 		'declaration-property-value-whitelist': null,
 
 		// Declaration block - http://stylelint.io/user-guide/rules/#declaration-block
-		'declaration-block-no-duplicate-properties': true,
+		'declaration-block-no-duplicate-properties': [true, {
+			ignore: ['consecutive-duplicates-with-different-values']
+		}],
 		'declaration-block-no-ignored-properties': true,
+		'declaration-block-no-redundant-longhand-properties': true,
 		'declaration-block-no-shorthand-property-overrides': true,
 		'declaration-block-properties-order': [
 			// Positioning
@@ -255,6 +260,7 @@ module.exports = {
 		'selector-class-pattern': null,
 		'selector-combinator-space-after': 'always',
 		'selector-combinator-space-before': 'always',
+		'selector-descendant-combinator-no-non-space': true,
 		'selector-id-pattern': null,
 		'selector-max-compound-selectors': 3,
 		'selector-max-empty-lines': 0,
@@ -303,6 +309,7 @@ module.exports = {
 		'media-feature-colon-space-after': 'always',
 		'media-feature-colon-space-before': 'never',
 		'media-feature-name-case': 'lower',
+		'media-feature-name-no-unknown': true,
 		'media-feature-name-no-vendor-prefix': true,
 		'media-feature-no-missing-punctuation': true,
 		'media-feature-parentheses-space-inside': 'never',
@@ -344,7 +351,7 @@ module.exports = {
 		// General / Sheet - http://stylelint.io/user-guide/rules/#general--sheet
 		'indentation': 'tab',
 		'max-empty-lines': 2,
-		'max-line-length': null,
+		'max-line-length': null, // TODO: enable when single line comments are supported
 		'max-nesting-depth': 3,
 		'no-browser-hacks': null, // Disabled because of: https://github.com/stylelint/stylelint/issues/871
 		'no-descending-specificity': true,
