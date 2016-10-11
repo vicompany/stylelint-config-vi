@@ -30,7 +30,9 @@ module.exports = {
 		'function-parentheses-space-inside': 'never-single-line',
 		'function-url-data-uris': 'never',
 		'function-url-no-scheme-relative': true,
-		'function-url-quotes': 'always',
+		'function-url-quotes': ['always', {
+			except: ['empty']
+		}],
 		'function-url-scheme-whitelist': null,
 		'function-whitelist': null,
 		'function-whitespace-after': 'always',
@@ -310,9 +312,11 @@ module.exports = {
 		// Media feature - http://stylelint.io/user-guide/rules/#media-feature
 		'media-feature-colon-space-after': 'always',
 		'media-feature-colon-space-before': 'never',
+		'media-feature-name-blacklist': null,
 		'media-feature-name-case': 'lower',
 		'media-feature-name-no-unknown': true,
 		'media-feature-name-no-vendor-prefix': true,
+		'media-feature-name-whitelist': null,
 		'media-feature-no-missing-punctuation': true,
 		'media-feature-parentheses-space-inside': 'never',
 		'media-feature-range-operator-space-after': 'always',
