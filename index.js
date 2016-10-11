@@ -4,7 +4,9 @@ module.exports = {
 		// Color - http://stylelint.io/user-guide/rules/#color
 		'color-hex-case': 'lower', // 'upper',
 		'color-hex-length': 'short',
-		'color-named': 'never',
+		'color-named': ['never', {
+			ignore: ['inside-function']
+		}],
 		'color-no-hex': null,
 		'color-no-invalid-hex': true,
 
