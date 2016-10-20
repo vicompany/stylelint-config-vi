@@ -272,6 +272,7 @@ module.exports = {
 		'selector-nested-pattern': null,
 		'selector-no-attribute': null,
 		'selector-no-combinator': null,
+		'selector-no-empty': true,
 		'selector-no-id': true,
 		'selector-no-qualifying-type': [true, {
 			ignore: ['attribute']
