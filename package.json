@@ -24,12 +24,12 @@
   "bugs": "https://github.com/vicompany/stylelint-config-vi/issues",
   "homepage": "https://github.com/vicompany/stylelint-config-vi",
   "devDependencies": {
-    "eslint": "^3.8.1",
-    "eslint-config-vi": "^2.2.1",
+    "eslint": "^3.10.2",
+    "eslint-config-vi": "^3.0.1",
     "jasmine": "^2.5.2",
-    "stylelint": "^7.5.0"
+    "stylelint": "^7.6.0"
   },
   "peerDependencies": {
-    "stylelint": "^7.5.0"
+    "stylelint": "^7.6.0"
   }
 }

@@ -5,13 +5,14 @@ module.exports = {
 		'color-hex-case': 'lower', // 'upper',
 		'color-hex-length': 'short',
 		'color-named': ['never', {
-			ignore: ['inside-function']
+			ignore: ['inside-function'],
 		}],
 		'color-no-hex': null,
 		'color-no-invalid-hex': true,
 
 		// Font - http://stylelint.io/user-guide/rules/#font-family
 		'font-family-name-quotes': 'always-where-recommended',
+		'font-family-no-duplicate-names': true,
 
 		// Font-weight - http://stylelint.io/user-guide/rules/#font-weight
 		'font-weight-notation': 'named-where-possible',
@@ -31,7 +32,7 @@ module.exports = {
 		'function-url-data-uris': 'never',
 		'function-url-no-scheme-relative': true,
 		'function-url-quotes': ['always', {
-			except: ['empty']
+			except: ['empty'],
 		}],
 		'function-url-scheme-whitelist': null,
 		'function-whitelist': null,
@@ -97,7 +98,7 @@ module.exports = {
 		'declaration-no-important': true,
 		'declaration-property-unit-blacklist': {
 			'font-size': ['px'],
-			'line-height': ['px', 'rem', 'em']
+			'line-height': ['px', 'rem', 'em'],
 		},
 		'declaration-property-unit-whitelist': null,
 		'declaration-property-value-blacklist': null,
@@ -105,7 +106,7 @@ module.exports = {
 
 		// Declaration block - http://stylelint.io/user-guide/rules/#declaration-block
 		'declaration-block-no-duplicate-properties': [true, {
-			ignore: ['consecutive-duplicates-with-different-values']
+			ignore: ['consecutive-duplicates-with-different-values'],
 		}],
 		'declaration-block-no-ignored-properties': true,
 		'declaration-block-no-redundant-longhand-properties': true,
@@ -140,8 +141,8 @@ module.exports = {
 					'align-items',
 					'align-self',
 					'justify-content',
-					'order'
-				]
+					'order',
+				],
 			},
 
 			// Display & box model
@@ -179,8 +180,8 @@ module.exports = {
 					'text-rendering',
 					'text-shadow',
 					'text-transform',
-					'text-wrap'
-				]
+					'text-wrap',
+				],
 			},
 
 			'white-space',
@@ -205,8 +206,8 @@ module.exports = {
 					'animation-duration',
 					'animation-delay',
 					'animation-iteration-count',
-					'animation-timing-function'
-				]
+					'animation-timing-function',
+				],
 			},
 
 			// Other
@@ -226,12 +227,12 @@ module.exports = {
 					'user-select',
 					'vertical-align',
 					'visibility',
-					'wil-change'
-				]
+					'wil-change',
+				],
 			},
 
 			// Transitions
-			'transition'
+			'transition',
 		],
 		'declaration-block-semicolon-newline-after': 'always-multi-line',
 		'declaration-block-semicolon-newline-before': 'never-multi-line',
@@ -243,7 +244,7 @@ module.exports = {
 		// Block - http://stylelint.io/user-guide/rules/#block
 		'block-closing-brace-empty-line-before': 'never',
 		'block-closing-brace-newline-after': ['always', {
-			ignoreAtRules: ['if', 'else']
+			ignoreAtRules: ['if', 'else'],
 		}],
 		'block-closing-brace-newline-before': 'always-multi-line',
 		'block-closing-brace-space-after': null,
@@ -275,7 +276,7 @@ module.exports = {
 		'selector-no-empty': true,
 		'selector-no-id': true,
 		'selector-no-qualifying-type': [true, {
-			ignore: ['attribute']
+			ignore: ['attribute'],
 		}],
 		'selector-no-type': null, // TODO: only allow in 'base' files
 		'selector-no-universal': true,
@@ -304,10 +305,10 @@ module.exports = {
 		// Rule - http://stylelint.io/user-guide/rules/#rule
 		'rule-nested-empty-line-before': ['always', {
 			except: ['first-nested'],
-			ignore: ['after-comment']
+			ignore: ['after-comment'],
 		}],
 		'rule-non-nested-empty-line-before': ['always-multi-line', {
-			ignore: ['after-comment']
+			ignore: ['after-comment'],
 		}],
 
 		// Media feature - http://stylelint.io/user-guide/rules/#media-feature
@@ -336,7 +337,7 @@ module.exports = {
 		'at-rule-blacklist': null,
 		'at-rule-empty-line-before': ['always', {
 			ignore: ['after-comment', 'blockless-group', 'all-nested'],
-			ignoreAtRules: ['else']
+			ignoreAtRules: ['else'],
 		}],
 		'at-rule-name-case': 'lower',
 		'at-rule-name-newline-after': null,
@@ -370,6 +371,6 @@ module.exports = {
 		'no-invalid-double-slash-comments': true,
 		'no-missing-end-of-source-newline': true,
 		'no-unknown-animations': null,
-		'no-unsupported-browser-features': null // Disabled because it does not understand 'progressive enhancement' and it's slow
-	}
+		'no-unsupported-browser-features': null, // Disabled because it does not understand 'progressive enhancement' and it's slow
+	},
 };

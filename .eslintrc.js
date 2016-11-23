@@ -4,7 +4,4 @@ module.exports = {
 	env: {
 		jasmine: true
 	},
-	rules: {
-		strict: ['error', 'never']
-	}
 };

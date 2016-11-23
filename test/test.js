@@ -14,11 +14,11 @@ describe('SCSS', () => {
 				config,
 				code: scss,
 				syntax: 'scss',
-				formatter: 'string'
+				formatter: 'string',
 			})
 			.then((data) => {
-				let { output, errored, results } = data;
-				let { warnings } = results[0];
+				const { output, errored, results } = data;
+				const { warnings } = results[0];
 
 				// Show (error) output in Travis/console
 				console.log(output);
