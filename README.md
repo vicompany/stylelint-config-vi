@@ -1,5 +1,6 @@
 # stylelint-config-vi
 
+[![npm](https://img.shields.io/npm/v/stylelint-config-vi.svg)](https://npm.im/stylelint-config-vi)
 [![Build Status](https://travis-ci.org/vicompany/stylelint-config-vi.svg?branch=master)](https://travis-ci.org/vicompany/stylelint-config-vi)
 
 This package provides a [Stylelint shareable config](http://stylelint.io/user-guide/configuration/#extends) for the VI Company's Sass coding style.
