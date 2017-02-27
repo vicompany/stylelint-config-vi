@@ -1,6 +1,8 @@
 module.exports = {
+	plugins: [
+		'stylelint-order',
+	],
 	rules: {
-
 		// Color - http://stylelint.io/user-guide/rules/#color
 		'color-hex-case': 'lower', // 'upper',
 		'color-hex-length': 'short',
@@ -51,7 +53,7 @@ module.exports = {
 		'length-zero-no-unit': true,
 
 		// Time - http://stylelint.io/user-guide/rules/#time
-		'time-no-imperceptible': true,
+		'time-min-milliseconds': 100,
 
 		// Unit - http://stylelint.io/user-guide/rules/#unit
 		'unit-blacklist': ['mm', 'q', 'cm', 'in', 'pt', 'pc'],
@@ -72,7 +74,6 @@ module.exports = {
 
 		// Custom property - http://stylelint.io/user-guide/rules/#custom-property
 		'custom-property-empty-line-before': null,
-		'custom-property-no-outside-root': true,
 		'custom-property-pattern': null,
 
 		// Shorthand property - http://stylelint.io/user-guide/rules/#shorthand-property
@@ -105,38 +106,34 @@ module.exports = {
 		'declaration-property-value-whitelist': null,
 
 		// Declaration block - http://stylelint.io/user-guide/rules/#declaration-block
-		'declaration-block-no-duplicate-properties': [true, {
-			ignore: ['consecutive-duplicates-with-different-values'],
-		}],
-		'declaration-block-no-ignored-properties': true,
-		'declaration-block-no-redundant-longhand-properties': true,
-		'declaration-block-no-shorthand-property-overrides': true,
-		'declaration-block-properties-order': [
-			// Positioning
-			'position',
-			'top',
-			'right',
-			'bottom,',
-			'left',
-			'z-index',
-
-			// Transforms
-			'perspective',
-			'transform',
-
-			'float',
-			'clear',
-
-			'flex',
-			{
-				order: 'flexible',
+		'order/declaration-block-order': [
+			'at-rules',
+			'declarations',
+			'rules',
+		],
+		'order/declaration-block-property-groups-structure': [
+			[{
 				properties: [
-					'flex-basis',
-					'flex-direction',
-					'flex-flow',
-					'flex-grow',
-					'flex-shrink',
-					'flex-wrap',
+					// Positioning
+					'position',
+					'top',
+					'right',
+					'bottom,',
+					'left',
+					'z-index',
+				],
+			},
+			{
+				emptyLineBefore: 'always',
+				properties: [
+					// Transforms
+					'perspective',
+					'transform',
+
+					'float',
+					'clear',
+
+					'flex',
 					'align-content',
 					'align-items',
 					'align-self',
@@ -144,34 +141,37 @@ module.exports = {
 					'order',
 				],
 			},
-
-			// Display & box model
-			'box-sizing',
-			'display',
-			'overflow',
-
-			'width',
-			'min-width',
-			'max-width',
-
-			'height',
-			'min-height',
-			'max-height',
-
-			'margin',
-			'padding',
-
-			// Colors & typography
-			'color',
-			'font',
-
-			'letter-spacing',
-			'line-height',
-			'list-style',
-
 			{
-				order: 'flexible',
+				emptyLineBefore: 'always',
 				properties: [
+					// Display & box model
+					'box-sizing',
+					'display',
+					'overflow',
+
+					'width',
+					'min-width',
+					'max-width',
+
+					'height',
+					'min-height',
+					'max-height',
+
+					'margin',
+					'padding',
+				],
+			},
+			{
+				emptyLineBefore: 'always',
+				properties: [
+					// Colors & typography
+					'color',
+					'font',
+
+					'letter-spacing',
+					'line-height',
+					'list-style',
+
 					'text-align',
 					'text-decoration',
 					'text-indent',
@@ -181,59 +181,43 @@ module.exports = {
 					'text-shadow',
 					'text-transform',
 					'text-wrap',
+
+					'white-space',
+					'word-spacing',
+					'word-wrap',
 				],
 			},
-
-			'white-space',
-			'word-spacing',
-			'word-wrap',
-
-			// Background & borders
-			'background',
-			'border',
-			'outline',
-			'box-shadow',
-
-			// Animation
-			'animation',
-			'animation-name',
 			{
-				order: 'flexible',
+				emptyLineBefore: 'always',
 				properties: [
-					'animation-play-state',
-					'animation-direction',
-					'animation-fill-mode',
-					'animation-duration',
-					'animation-delay',
-					'animation-iteration-count',
-					'animation-timing-function',
+					// Background & borders
+					'background',
+					'border',
+					'outline',
+					'box-shadow',
 				],
 			},
-
-			// Other
 			{
-				order: 'flexible',
+				emptyLineBefore: 'always',
 				properties: [
-					'caption-side',
-					'content',
-					'cursor',
-					'empty-cells',
-					'opacity',
-					'pointer-events',
-					'quotes',
-					'resize',
-					'speak',
-					'table-layout',
-					'user-select',
-					'vertical-align',
-					'visibility',
-					'wil-change',
+					// Animation
+					'animation',
 				],
 			},
-
-			// Transitions
-			'transition',
+			{
+				emptyLineBefore: 'always',
+				properties: [
+					// Transitions
+					'transition',
+				],
+			}],
+			{ unspecified: 'bottom' },
 		],
+		'declaration-block-no-duplicate-properties': [true, {
+			ignore: ['consecutive-duplicates-with-different-values'],
+		}],
+		'declaration-block-no-redundant-longhand-properties': true,
+		'declaration-block-no-shorthand-property-overrides': true,
 		'declaration-block-semicolon-newline-after': 'always-multi-line',
 		'declaration-block-semicolon-newline-before': 'never-multi-line',
 		'declaration-block-semicolon-space-after': 'always-single-line',
@@ -273,7 +257,6 @@ module.exports = {
 		'selector-nested-pattern': null,
 		'selector-no-attribute': null,
 		'selector-no-combinator': null,
-		'selector-no-empty': true,
 		'selector-no-id': true,
 		'selector-no-qualifying-type': [true, {
 			ignore: ['attribute'],
@@ -289,7 +272,6 @@ module.exports = {
 		'selector-pseudo-element-case': 'lower',
 		'selector-pseudo-element-colon-notation': 'single',
 		'selector-pseudo-element-no-unknown': true,
-		'selector-root-no-composition': true,
 		'selector-type-case': 'lower',
 		'selector-type-no-unknown': true,
 
@@ -299,15 +281,9 @@ module.exports = {
 		'selector-list-comma-space-after': 'always-single-line',
 		'selector-list-comma-space-before': 'never',
 
-		// Root rule - http://stylelint.io/user-guide/rules/#root-rule
-		'root-no-standard-properties': true,
-
 		// Rule - http://stylelint.io/user-guide/rules/#rule
-		'rule-nested-empty-line-before': ['always', {
+		'rule-empty-line-before': ['always-multi-line', {
 			except: ['first-nested'],
-			ignore: ['after-comment'],
-		}],
-		'rule-non-nested-empty-line-before': ['always-multi-line', {
 			ignore: ['after-comment'],
 		}],
 
@@ -319,7 +295,6 @@ module.exports = {
 		'media-feature-name-no-unknown': true,
 		'media-feature-name-no-vendor-prefix': true,
 		'media-feature-name-whitelist': null,
-		'media-feature-no-missing-punctuation': true,
 		'media-feature-parentheses-space-inside': 'never',
 		'media-feature-range-operator-space-after': 'always',
 		'media-feature-range-operator-space-before': 'always',
@@ -336,7 +311,7 @@ module.exports = {
 		// At-rule - http://stylelint.io/user-guide/rules/#at-rule
 		'at-rule-blacklist': null,
 		'at-rule-empty-line-before': ['always', {
-			ignore: ['after-comment', 'blockless-group', 'all-nested'],
+			ignore: ['after-comment', 'blockless-after-blockless', 'inside-block'],
 			ignoreAtRules: ['else'],
 		}],
 		'at-rule-name-case': 'lower',

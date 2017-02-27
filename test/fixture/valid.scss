@@ -29,8 +29,17 @@ body {
 }
 
 .btn {
+	@include clearfix();
+
 	appearance: none;
 	contain: content;
+}
+
+.flex {
+	flex: 0 0 auto;
+	flex-wrap: wrap-reverse;
+
+	display: flex;
 }
 
 // Selectors
@@ -38,10 +47,12 @@ body {
 .selector-2,
 .selector-3[type='text'] {
 	position: relative;
+
 	box-sizing: border-box;
 	display: block;
 
 	color: $dark;
+
 	background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 
@@ -61,11 +72,13 @@ body {
 	&:before {
 		position: absolute;
 		left: 0;
+
 		content: '';
 	}
 
 	&:after {
 		background-image: url('x.svg');
+
 		content: '→';
 	}
 }
@@ -83,9 +96,16 @@ body {
 	}
 }
 
+.unstyled {
+	@extend .nav;
+
+	display: inline;
+}
+
 .selector-a,
 .selector-b:not(:first-child) {
 	top: calc(calc(1rem * 2) / 3);
+
 	padding: 0.5rem;
 }
 
@@ -115,6 +135,15 @@ body {
 	animation: fancy-slide 2s linear;
 }
 
+// Unspecified
+// Unspecified properties are expected after the specified properties
+.unspecified {
+	display: inline-block;
+
+	pointer-events: none;
+	opacity: 0.5;
+}
+
 // Media queries
 @media (min-width: 35rem) {
 	.selector-1 {
@@ -140,7 +169,6 @@ body {
 .nav--main {
 	position: fixed;
 	position: absolute; // For older (mobile) browsers
-
 	top: 0;
 	left: 0;
 }
