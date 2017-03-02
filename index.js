@@ -134,9 +134,7 @@ module.exports = {
 					'clear',
 
 					'flex',
-					'align-content',
-					'align-items',
-					'align-self',
+					'align', // Covers align-content, align-items and align-self
 					'justify-content',
 					'order',
 				],
@@ -172,19 +170,10 @@ module.exports = {
 					'line-height',
 					'list-style',
 
-					'text-align',
-					'text-decoration',
-					'text-indent',
-					'text-justify',
-					'text-overflow',
-					'text-rendering',
-					'text-shadow',
-					'text-transform',
-					'text-wrap',
+					'text', // Covers text-align, text-decoration, text-shadow, etc.
 
 					'white-space',
-					'word-spacing',
-					'word-wrap',
+					'word', // Covers word-wrap and word-spacing
 				],
 			},
 			{

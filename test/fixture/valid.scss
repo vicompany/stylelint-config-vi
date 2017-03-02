@@ -42,6 +42,12 @@ body {
 	display: flex;
 }
 
+.text {
+	text-rendering: optimizeLegibility;
+	text-align: center;
+	white-space: nowrap;
+}
+
 // Selectors
 .selector-1,
 .selector-2,

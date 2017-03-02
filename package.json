@@ -23,12 +23,14 @@
   "license": "MIT",
   "bugs": "https://github.com/vicompany/stylelint-config-vi/issues",
   "homepage": "https://github.com/vicompany/stylelint-config-vi",
+  "dependencies": {
+    "stylelint-order": "^0.3.0"
+  },
   "devDependencies": {
     "eslint": "^3.10.2",
     "eslint-config-vi": "^3.0.1",
     "jasmine": "^2.5.2",
-    "stylelint": "^7.9.0",
-    "stylelint-order": "^0.3.0"
+    "stylelint": "^7.9.0"
   },
   "peerDependencies": {
     "stylelint": "^7.9.0"
