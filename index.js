@@ -114,7 +114,7 @@ module.exports = {
 			{
 				type: 'at-rule',
 				name: 'include',
-				parameter: /^(?!respond-to\(\w+\)$)/,
+				parameter: /^(?!respond-to\(.*\)$)/,
 			},
 			{
 				type: 'at-rule',
