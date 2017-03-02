@@ -38,6 +38,10 @@ body {
 
 	appearance: none;
 	contain: content;
+
+	@include respond-to(medium) {
+		padding: 2rem;
+	}
 }
 
 .display {
