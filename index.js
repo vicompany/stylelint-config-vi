@@ -107,7 +107,18 @@ module.exports = {
 
 		// Declaration block - http://stylelint.io/user-guide/rules/#declaration-block
 		'order/declaration-block-order': [
-			'at-rules',
+			{
+				type: 'at-rule',
+				name: 'extend',
+			},
+			{
+				type: 'at-rule',
+				name: 'include',
+			},
+			{
+				type: 'at-rule',
+				name: 'media',
+			},
 			'declarations',
 			'rules',
 		],

@@ -7,6 +7,10 @@ $dark: #333;
 $light: #ffc;
 $typeface: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */ // https://github.com/vicompany/stylelint-config-vi/issues/3
 
+%silent {
+	display: inline-block;
+}
+
 // Global styling
 html {
 	box-sizing: border-box;
@@ -29,7 +33,8 @@ body {
 }
 
 .btn {
-	@include clearfix();
+	@extend %silent;
+	@include clearfix;
 
 	appearance: none;
 	contain: content;
@@ -116,12 +121,6 @@ body {
 	}
 }
 
-.unstyled {
-	@extend .nav;
-
-	display: inline;
-}
-
 .selector-a,
 .selector-b:not(:first-child) {
 	top: calc(calc(1rem * 2) / 3);
@@ -180,6 +179,20 @@ body {
 @media not screen and (color), print and (color) {
 	.selector-3 {
 		padding: 0.5rem;
+	}
+}
+
+@mixin breakpoint-sync($breakpoints: $breakpoints) {
+	display: block;
+
+	overflow: hidden;
+	width: 0;
+	height: 0;
+
+	@each $name, $value in $breakpoints {
+		@include respond-to($name) {
+			content: breakpoints-to-json($name);
+		}
 	}
 }
 
