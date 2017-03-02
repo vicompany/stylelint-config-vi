@@ -105,7 +105,7 @@ module.exports = {
 		'declaration-property-value-blacklist': null,
 		'declaration-property-value-whitelist': null,
 
-		// Declaration block - http://stylelint.io/user-guide/rules/#declaration-block
+		// Declaration order - https://github.com/hudochenkov/stylelint-order
 		'order/declaration-block-order': [
 			{
 				type: 'at-rule',
@@ -129,7 +129,7 @@ module.exports = {
 					'position',
 					'top',
 					'right',
-					'bottom,',
+					'bottom',
 					'left',
 					'z-index',
 				],
@@ -219,6 +219,7 @@ module.exports = {
 			}],
 			{ unspecified: 'bottom' },
 		],
+		// Declaration block - http://stylelint.io/user-guide/rules/#declaration-block
 		'declaration-block-no-duplicate-properties': [true, {
 			ignore: ['consecutive-duplicates-with-different-values'],
 		}],
