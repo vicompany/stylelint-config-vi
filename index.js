@@ -126,12 +126,8 @@ module.exports = {
 			{
 				emptyLineBefore: 'always',
 				properties: [
-					// Transforms
-					'perspective',
-					'transform',
-
-					'float',
-					'clear',
+					// Display & flex
+					'display',
 
 					'flex',
 					'align', // Covers align-content, align-items and align-self
@@ -142,9 +138,19 @@ module.exports = {
 			{
 				emptyLineBefore: 'always',
 				properties: [
-					// Display & box model
+					// Transforms & floats
+					'perspective',
+					'transform',
+
+					'float',
+					'clear',
+				],
+			},
+			{
+				emptyLineBefore: 'always',
+				properties: [
+					// Box model
 					'box-sizing',
-					'display',
 					'overflow',
 
 					'width',

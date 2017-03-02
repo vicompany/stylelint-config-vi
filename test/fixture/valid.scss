@@ -35,11 +35,24 @@ body {
 	contain: content;
 }
 
-.flex {
+.display {
+	display: flex;
 	flex: 0 0 auto;
 	flex-wrap: wrap-reverse;
+	order: 2;
 
-	display: flex;
+	overflow: hidden;
+}
+
+.positioning {
+	position: absolute;
+	right: 0;
+	z-index: 2;
+
+	display: inline-block;
+
+	overflow: hidden;
+	width: 5rem;
 }
 
 .text {
@@ -54,8 +67,9 @@ body {
 .selector-3[type='text'] {
 	position: relative;
 
-	box-sizing: border-box;
 	display: block;
+
+	box-sizing: border-box;
 
 	color: $dark;
 
