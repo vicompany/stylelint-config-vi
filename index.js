@@ -328,6 +328,7 @@ module.exports = {
 		'at-rule-no-unknown': null, // Disabled because of errors on @mixin, @if, etc: https://github.com/stylelint/stylelint/issues/1515
 		'at-rule-no-vendor-prefix': true,
 		'at-rule-semicolon-newline-after': 'always',
+		'at-rule-semicolon-space-before': 'never',
 		'at-rule-whitelist': null,
 
 		// stylelint-disable Comment - http://stylelint.io/user-guide/rules/#stylelint-disable-comment
