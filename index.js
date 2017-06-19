@@ -213,6 +213,9 @@ module.exports = {
 					'letter-spacing',
 					'line-height',
 					'list-style',
+					'list-style-type',
+					'list-style-position',
+					'list-style-image',
 
 					'text-align',
 					'text-decoration',
@@ -271,7 +274,7 @@ module.exports = {
 					'transition',
 				],
 			}],
-			{ unspecified: 'bottom' },
+			{ unspecified: 'ignore' },
 		],
 		// Declaration block - http://stylelint.io/user-guide/rules/#declaration-block
 		'declaration-block-no-duplicate-properties': [true, {
