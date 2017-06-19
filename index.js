@@ -106,7 +106,7 @@ module.exports = {
 		'declaration-property-value-whitelist': null,
 
 		// Declaration order - https://github.com/hudochenkov/stylelint-order
-		'order/declaration-block-order': [
+		'order/order': [
 			{
 				type: 'at-rule',
 				name: 'extend',
@@ -123,7 +123,7 @@ module.exports = {
 			'declarations',
 			'rules',
 		],
-		'order/declaration-block-property-groups-structure': [
+		'order/properties-order': [
 			[{
 				properties: [
 					// Positioning
@@ -137,18 +137,28 @@ module.exports = {
 			},
 			{
 				emptyLineBefore: 'always',
+				order: 'flexible',
 				properties: [
 					// Display & flex
 					'display',
 
 					'flex',
-					'align', // Covers align-content, align-items and align-self
+					'flex-grow',
+					'flex-shrink',
+					'flex-basis',
+					'flex-flow',
+					'flex-direction',
+					'flex-wrap',
+					'align-content',
+					'align-items',
+					'align-self',
 					'justify-content',
 					'order',
 				],
 			},
 			{
 				emptyLineBefore: 'always',
+				order: 'flexible',
 				properties: [
 					// Transforms & floats
 					'perspective',
@@ -179,6 +189,7 @@ module.exports = {
 			},
 			{
 				emptyLineBefore: 'always',
+				order: 'flexible',
 				properties: [
 					// Colors & typography
 					'color',
@@ -188,17 +199,34 @@ module.exports = {
 					'line-height',
 					'list-style',
 
-					'text', // Covers text-align, text-decoration, text-shadow, etc.
+					'text-align',
+					'text-decoraion',
+					'text-indent',
+					'text-overflow',
+					'text-rendering',
+					'text-shadow',
+					'text-transform',
 
 					'white-space',
-					'word', // Covers word-wrap and word-spacing
+					'word-break',
+					'word-spacing',
+					'word-wrap',
 				],
 			},
 			{
 				emptyLineBefore: 'always',
+				order: 'flexible',
 				properties: [
 					// Background & borders
 					'background',
+					'background-image',
+					'background-position',
+					'background-size',
+					'background-repeat',
+					'background-origin',
+					'background-clip',
+					'background-attachment',
+					'background-color',
 					'border',
 					'outline',
 					'box-shadow',
