@@ -174,6 +174,8 @@ module.exports = {
 					// Box model
 					'box-sizing',
 					'overflow',
+					'overflow-x',
+					'overflow-y',
 
 					'width',
 					'min-width',
@@ -184,7 +186,15 @@ module.exports = {
 					'max-height',
 
 					'margin',
+					'margin-top',
+					'margin-right',
+					'margin-bottom',
+					'margin-left',
 					'padding',
+					'padding-top',
+					'padding-right',
+					'padding-bottom',
+					'padding-left',
 				],
 			},
 			{
@@ -194,6 +204,11 @@ module.exports = {
 					// Colors & typography
 					'color',
 					'font',
+					'font-family',
+					'font-size',
+					'font-style',
+					'font-variant',
+					'font-weight',
 
 					'letter-spacing',
 					'line-height',
@@ -228,6 +243,16 @@ module.exports = {
 					'background-attachment',
 					'background-color',
 					'border',
+					'border-radius',
+					'border-collapse',
+					'border-color',
+					'border-spacing',
+					'border-style',
+					'border-width',
+					'border-top',
+					'border-right',
+					'border-bottom',
+					'border-left',
 					'outline',
 					'box-shadow',
 				],
