@@ -200,7 +200,7 @@ module.exports = {
 					'list-style',
 
 					'text-align',
-					'text-decoraion',
+					'text-decoration',
 					'text-indent',
 					'text-overflow',
 					'text-rendering',
