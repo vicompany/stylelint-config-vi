@@ -17,13 +17,15 @@ html {
 	overflow-y: scroll;
 }
 
-* { /* stylelint-disable-line selector-no-universal */
+// stylelint-disable selector-max-universal
+* {
 	&,
 	&:before,
 	&:after {
 		box-sizing: inherit;
 	}
 }
+// stylelint-enable selector-max-universal
 
 body {
 	margin: 0;
@@ -106,7 +108,7 @@ body {
 	}
 
 	&:after {
-		background-image: url('x.svg');
+		background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=');
 		background-color: $light;
 
 		content: '→';

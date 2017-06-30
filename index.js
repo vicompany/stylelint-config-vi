@@ -31,7 +31,7 @@ module.exports = {
 		'function-name-case': 'lower',
 		'function-parentheses-newline-inside': 'always-multi-line',
 		'function-parentheses-space-inside': 'never-single-line',
-		'function-url-data-uris': 'never',
+		'function-url-scheme-blacklist': ['/^data:/'],
 		'function-url-no-scheme-relative': true,
 		'function-url-quotes': ['always', {
 			except: ['empty'],
@@ -321,12 +321,12 @@ module.exports = {
 		'selector-nested-pattern': null,
 		'selector-no-attribute': null,
 		'selector-no-combinator': null,
-		'selector-no-id': true,
+		'selector-max-id': 0,
 		'selector-no-qualifying-type': [true, {
 			ignore: ['attribute'],
 		}],
 		'selector-no-type': null, // TODO: only allow in 'base' files
-		'selector-no-universal': true,
+		'selector-max-universal': 0,
 		'selector-no-vendor-prefix': true,
 		'selector-pseudo-class-blacklist': null,
 		'selector-pseudo-class-case': 'lower',
