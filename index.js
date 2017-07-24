@@ -298,7 +298,6 @@ module.exports = {
 		'block-closing-brace-space-after': null,
 		'block-closing-brace-space-before': 'always-single-line',
 		'block-no-empty': true,
-		'block-no-single-line': null,
 		'block-opening-brace-newline-after': 'always-multi-line',
 		'block-opening-brace-newline-before': null,
 		'block-opening-brace-space-after': 'always-single-line',
@@ -319,13 +318,10 @@ module.exports = {
 		'selector-max-empty-lines': 0,
 		'selector-max-specificity': null, // TODO
 		'selector-nested-pattern': null,
-		'selector-no-attribute': null,
-		'selector-no-combinator': null,
 		'selector-max-id': 0,
 		'selector-no-qualifying-type': [true, {
 			ignore: ['attribute'],
 		}],
-		'selector-no-type': null, // TODO: only allow in 'base' files
 		'selector-max-universal': 0,
 		'selector-no-vendor-prefix': true,
 		'selector-pseudo-class-blacklist': null,
@@ -387,9 +383,6 @@ module.exports = {
 		'at-rule-semicolon-space-before': 'never',
 		'at-rule-whitelist': null,
 
-		// stylelint-disable Comment - http://stylelint.io/user-guide/rules/#stylelint-disable-comment
-		'stylelint-disable-reason': null,
-
 		// Comment - http://stylelint.io/user-guide/rules/#comment
 		'comment-no-empty': true,
 		'comment-empty-line-before': null,
@@ -401,16 +394,13 @@ module.exports = {
 		'max-empty-lines': 2,
 		'max-line-length': null, // TODO: enable when single line comments are supported
 		'max-nesting-depth': 3,
-		'no-browser-hacks': null, // Disabled because of: https://github.com/stylelint/stylelint/issues/871
 		'no-descending-specificity': true,
 		'no-duplicate-selectors': true,
 		'no-empty-source': true,
 		'no-eol-whitespace': true,
 		'no-extra-semicolons': true,
-		'no-indistinguishable-colors': null, // Disabled because of: https://github.com/SlexAxton/css-colorguard/issues/32
 		'no-invalid-double-slash-comments': true,
 		'no-missing-end-of-source-newline': true,
 		'no-unknown-animations': null,
-		'no-unsupported-browser-features': null, // Disabled because it does not understand 'progressive enhancement' and it's slow
 	},
 };
