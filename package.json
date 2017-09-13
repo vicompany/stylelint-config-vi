@@ -30,9 +30,9 @@
     "eslint": "^3.10.2",
     "eslint-config-vi": "^3.0.1",
     "jasmine": "^2.5.2",
-    "stylelint": "^8.0.0"
+    "stylelint": "^8.1.1"
   },
   "peerDependencies": {
-    "stylelint": "^8.0.0"
+    "stylelint": "^8.1.1"
   }
 }
