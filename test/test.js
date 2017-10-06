@@ -16,18 +16,18 @@ describe('SCSS', () => {
 				syntax: 'scss',
 				formatter: 'string',
 			})
-			.then((data) => {
-				const { output, errored, results } = data;
-				const { warnings } = results[0];
+				.then((data) => {
+					const { output, errored, results } = data;
+					const [{ warnings }] = results;
 
-				// Show (error) output in Travis/console
-				console.log(output);
+					// Show (error) output in Travis/console
+					console.log(output);
 
-				expect(errored).toBe(false);
-				expect(warnings.length).toBe(0);
+					expect(errored).toBe(false);
+					expect(warnings.length).toBe(0);
 
-				done();
-			});
+					done();
+				});
 		});
 	});
 });
