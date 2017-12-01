@@ -395,6 +395,7 @@ module.exports = {
 		'max-line-length': null, // TODO: enable when single line comments are supported
 		'max-nesting-depth': 3,
 		'no-descending-specificity': true,
+		'no-duplicate-at-import-rules': true,
 		'no-duplicate-selectors': true,
 		'no-empty-source': true,
 		'no-eol-whitespace': true,
