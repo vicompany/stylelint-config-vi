@@ -31,6 +31,7 @@ body {
 	margin: 0;
 	padding: 0;
 
+	color: $dark;
 	font: 1rem/1.5 $typeface;
 }
 
@@ -55,6 +56,18 @@ body {
 	overflow: hidden;
 }
 
+.grid {
+	display: grid;
+
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	grid-gap: 1rem;
+
+	width: 50%;
+
+	background: #fff;
+}
+
 .positioning {
 	position: absolute;
 	right: 0;
@@ -67,6 +80,7 @@ body {
 }
 
 .text {
+	color: #f00;
 	text-rendering: optimizeLegibility;
 	text-align: center;
 	white-space: nowrap;
@@ -173,6 +187,7 @@ body {
 // Media queries
 @media (min-width: 35rem) {
 	.selector-1 {
+		transform-origin: center;
 		transform: translate(1, 1) scale(3);
 	}
 }
@@ -207,8 +222,8 @@ body {
 // Allow "consecutive-duplicates-with-different-values"
 // http://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/
 .nav--main {
-	position: fixed;
-	position: absolute; // For older (mobile) browsers
+	position: sticky;
+	position: fixed; // For older (mobile) browsers
 	top: 0;
 	left: 0;
 }

@@ -139,7 +139,7 @@ module.exports = {
 				emptyLineBefore: 'always',
 				order: 'flexible',
 				properties: [
-					// Display & flex
+					// Display, flex & grid;
 					'display',
 
 					'flex',
@@ -149,11 +149,35 @@ module.exports = {
 					'flex-flow',
 					'flex-direction',
 					'flex-wrap',
+
+					'grid',
+					'grid-auto-columns',
+					'grid-auto-rows',
+					'grid-auto-flow',
+					'grid-area',
+					'grid-column',
+					'grid-column-start',
+					'grid-column-end',
+					'grid-column-gap',
+					'grid-row',
+					'grid-row-start',
+					'grid-row-end',
+					'grid-row-gap',
+					'grid-template',
+					'grid-template-columns',
+					'grid-template-rows',
+					'grid-gap',
+
 					'align-content',
 					'align-items',
 					'align-self',
 					'justify-content',
+					'justify-items',
+					'justify-self',
 					'order',
+					'place-content',
+					'place-items',
+					'place-self',
 				],
 			},
 			{
@@ -163,6 +187,7 @@ module.exports = {
 					// Transforms & floats
 					'perspective',
 					'transform',
+					'transform-origin',
 
 					'float',
 					'clear',
