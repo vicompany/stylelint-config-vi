@@ -116,10 +116,6 @@ module.exports = {
 				name: 'include',
 				parameter: /^(?!respond-to\(.*\)$)/,
 			},
-			{
-				type: 'at-rule',
-				name: 'media',
-			},
 			'declarations',
 			'rules',
 		],

@@ -1,23 +1,21 @@
-@charset 'utf-8';
 
-@import 'variables';
-
-// Variables
-$dark: #333;
-$light: #ffc;
-$typeface: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */ // https://github.com/vicompany/stylelint-config-vi/issues/3
-
-%silent {
-	display: inline-block;
+/* Variables */
+:root {
+	--dark: #333;
+	--light: #ffc;
+	--typeface: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
 }
 
-// Global styling
+/* Custom media */
+@custom-media --large-viewport (min-width: 768px);
+
+/* Global styling */
 html {
 	box-sizing: border-box;
 	overflow-y: scroll;
 }
 
-// stylelint-disable selector-max-universal
+/* stylelint-disable selector-max-universal */
 * {
 	&,
 	&:before,
@@ -25,24 +23,21 @@ html {
 		box-sizing: inherit;
 	}
 }
-// stylelint-enable selector-max-universal
+/* stylelint-enable selector-max-universal */
 
 body {
 	margin: 0;
 	padding: 0;
 
-	color: $dark;
-	font: 1rem/1.5 $typeface;
+	color: var(--dark);
+	font: 1rem/1.5 var(--typeface);
 }
 
 .btn {
-	@extend %silent;
-	@include clearfix;
-
 	appearance: none;
 	contain: content;
 
-	@include respond-to(medium) {
+	@media (--large-viewport) {
 		padding: 2rem;
 	}
 }
@@ -77,10 +72,6 @@ body {
 
 	overflow: hidden;
 	width: 5rem;
-
-	@media (--large-viewport) {
-		overflow: auto;
-	}
 }
 
 .text {
@@ -90,7 +81,7 @@ body {
 	white-space: nowrap;
 }
 
-// Selectors
+/* Selectors */
 .selector-1,
 .selector-2,
 .selector-3[type='text'] {
@@ -100,15 +91,15 @@ body {
 
 	box-sizing: border-box;
 
-	color: $dark;
+	color: var(--dark);
 
 	background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 
-// Pseudo classes
+/* Pseudo classes */
 .selector-1 {
 	&:focus {
-		border: solid 1px $dark;
+		border: solid 1px var(--dark);
 	}
 
 	&:hover {
@@ -116,7 +107,7 @@ body {
 	}
 }
 
-// Pseudo elements
+/* Pseudo elements */
 .selector-2 {
 	&:before {
 		position: absolute;
@@ -133,19 +124,19 @@ body {
 	}
 }
 
-// Nesting and chaining selectors
+/* Nesting and chaining selectors */
 .nav {
-	> .btn {
+	& > .btn {
 		margin: 0;
 	}
 
 	&.is-visible {
-		> .btn {
+		& > .btn {
 			margin: 2rem 1rem;
 		}
 	}
 
-	.nav-container & {
+	@nest .nav-container & {
 		padding: 1rem;
 	}
 }
@@ -157,13 +148,13 @@ body {
 	padding: 0.5rem;
 }
 
-// Single line selectors
-// Only allow one property and they don't require a newline
+/* Single line selectors */
+/* Only allow one property and they don't require a newline */
 .selector-x { width: 10%; }
 .selector-y { width: 20%; }
 .selector-z { width: 30%; }
 
-// Multi line values
+/* Multi line values */
 .selector-amaze {
 	background-image: repeating-linear-gradient(
 		-45deg,
@@ -172,19 +163,19 @@ body {
 		rgba(255, 255, 255, 1) 50px
 	);
 
-	box-shadow: 0 1px 1px $dark,
+	box-shadow: 0 1px 1px var(--dark),
 		0 1px 0 $light,
 		2px 2px 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
 
-// Animations
-// Allow unknown animations because we often use separate files.
+/* Animations */
+/* Allow unknown animations because we often use separate files. */
 .slide {
 	animation: fancy-slide 2s linear;
 }
 
-// Unspecified
-// Unspecified properties are expected after the specified properties
+/* Unspecified */
+/* Unspecified properties are expected after the specified properties */
 .unspecified {
 	display: inline-block;
 
@@ -192,8 +183,8 @@ body {
 	opacity: 0.5;
 }
 
-// Media queries
-@media (min-width: 35rem) {
+/* Media queries */
+@media (--large-viewport) {
 	.selector-1 {
 		transform-origin: center;
 		transform: translate(1, 1) scale(3);
@@ -212,26 +203,12 @@ body {
 	}
 }
 
-@mixin breakpoint-sync($breakpoints: $breakpoints) {
-	display: block;
-
-	overflow: hidden;
-	width: 0;
-	height: 0;
-
-	@each $name, $value in $breakpoints {
-		@include respond-to($name) {
-			content: breakpoints-to-json($name);
-		}
-	}
-}
-
-// CSS fallback duplicate properties
-// Allow "consecutive-duplicates-with-different-values"
-// http://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/
+/* CSS fallback duplicate properties */
+/* Allow "consecutive-duplicates-with-different-values" */
+/* http://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/ */
 .nav--main {
 	position: sticky;
-	position: fixed; // For older (mobile) browsers
+	position: fixed;  /* For older (mobile) browsers */
 	top: 0;
 	left: 0;
 }
