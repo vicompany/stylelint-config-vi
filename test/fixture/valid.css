@@ -124,6 +124,21 @@ body {
 	}
 }
 
+/* Logical combinations */
+section {
+	&:matches(h1, h1, h3) {
+		margin: 0 0 1rem;
+	}
+
+	& a:has(> img) {
+		display: block;
+	}
+
+	&:not(.contact) {
+		padding: 1rem;
+	}
+}
+
 /* Nesting and chaining selectors */
 .nav {
 	& > .btn {

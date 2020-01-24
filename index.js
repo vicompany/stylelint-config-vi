@@ -415,7 +415,9 @@ module.exports = {
 		'max-empty-lines': 2,
 		'max-line-length': null, // TODO: enable when single line comments are supported
 		'max-nesting-depth': 3,
-		'no-descending-specificity': true,
+		'no-descending-specificity': [true, {
+			ignore: ['selectors-within-list'],
+		}],
 		'no-duplicate-at-import-rules': true,
 		'no-duplicate-selectors': true,
 		'no-empty-source': true,
