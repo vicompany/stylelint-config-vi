@@ -31,7 +31,7 @@ module.exports = {
 		'function-name-case': 'lower',
 		'function-parentheses-newline-inside': 'always-multi-line',
 		'function-parentheses-space-inside': 'never-single-line',
-		'function-url-scheme-blacklist': ['/^data:/'],
+		'function-url-scheme-disallowed-list': ['/^data:/'],
 		'function-url-no-scheme-relative': true,
 		'function-url-quotes': ['always', {
 			except: ['empty'],
@@ -56,7 +56,7 @@ module.exports = {
 		'time-min-milliseconds': 100,
 
 		// Unit - http://stylelint.io/user-guide/rules/#unit
-		'unit-blacklist': ['mm', 'q', 'cm', 'in', 'pt', 'pc'],
+		'unit-disallowed-list': ['mm', 'q', 'cm', 'in', 'pt', 'pc'],
 		'unit-case': 'lower',
 		'unit-no-unknown': true,
 		'unit-whitelist': null,
@@ -97,9 +97,9 @@ module.exports = {
 		'declaration-colon-space-before': 'never',
 		'declaration-empty-line-before': null,
 		'declaration-no-important': true,
-		'declaration-property-unit-blacklist': {
+		'declaration-property-unit-disallowed-list': {
 			'font-size': ['px'],
-			'line-height': ['px', 'rem', 'em'],
+			'line-height': ['px', 'em'],
 		},
 		'declaration-property-unit-whitelist': null,
 		'declaration-property-value-blacklist': null,
