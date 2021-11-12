@@ -13,7 +13,7 @@ describe('SCSS', () => {
 			stylelint.lint({
 				config,
 				code: scss,
-				syntax: 'scss',
+				customSyntax: 'postcss-scss',
 				formatter: 'string',
 			})
 				.then((data) => {
@@ -21,7 +21,7 @@ describe('SCSS', () => {
 					const [{ warnings }] = results;
 
 					// Show (error) output in Travis/console
-					console.log(output);
+					console.error(output);
 
 					expect(errored).toBe(false);
 					expect(warnings.length).toBe(0);
@@ -42,7 +42,6 @@ describe('CSS', () => {
 			stylelint.lint({
 				config,
 				code: css,
-				syntax: 'css',
 				formatter: 'string',
 			})
 				.then((data) => {
@@ -50,7 +49,7 @@ describe('CSS', () => {
 					const [{ warnings }] = results;
 
 					// Show (error) output in Travis/console
-					console.log(output);
+					console.error(output);
 
 					expect(errored).toBe(false);
 					expect(warnings.length).toBe(0);

@@ -20,24 +20,24 @@ module.exports = {
 		'font-weight-notation': 'named-where-possible',
 
 		// Function - http://stylelint.io/user-guide/rules/#function
-		'function-blacklist': null,
+		'function-allowed-list': null,
 		'function-calc-no-unspaced-operator': true,
 		'function-comma-newline-after': 'always-multi-line',
 		'function-comma-newline-before': 'never-multi-line',
 		'function-comma-space-after': 'always-single-line',
 		'function-comma-space-before': 'never',
+		'function-disallowed-list': null,
 		'function-linear-gradient-no-nonstandard-direction': true,
 		'function-max-empty-lines': 0,
 		'function-name-case': 'lower',
 		'function-parentheses-newline-inside': 'always-multi-line',
 		'function-parentheses-space-inside': 'never-single-line',
-		'function-url-scheme-disallowed-list': ['/^data:/'],
 		'function-url-no-scheme-relative': true,
 		'function-url-quotes': ['always', {
 			except: ['empty'],
 		}],
-		'function-url-scheme-whitelist': null,
-		'function-whitelist': null,
+		'function-url-scheme-allowed-list': null,
+		'function-url-scheme-disallowed-list': ['/^data:/'],
 		'function-whitespace-after': 'always',
 
 		// Number - http://stylelint.io/user-guide/rules/#number
@@ -56,10 +56,10 @@ module.exports = {
 		'time-min-milliseconds': 100,
 
 		// Unit - http://stylelint.io/user-guide/rules/#unit
-		'unit-disallowed-list': ['mm', 'q', 'cm', 'in', 'pt', 'pc'],
+		'unit-allowed-list': null,
 		'unit-case': 'lower',
+		'unit-disallowed-list': ['mm', 'q', 'cm', 'in', 'pt', 'pc'],
 		'unit-no-unknown': true,
-		'unit-whitelist': null,
 
 		// Value - http://stylelint.io/user-guide/rules/#value
 		'value-keyword-case': 'lower',
@@ -80,11 +80,11 @@ module.exports = {
 		'shorthand-property-no-redundant-values': true,
 
 		// Property - http://stylelint.io/user-guide/rules/#property
-		'property-blacklist': null,
+		'property-allowed-list': null,
 		'property-case': 'lower',
+		'property-disallowed-list': null,
 		'property-no-unknown': true,
 		'property-no-vendor-prefix': true,
-		'property-whitelist': null,
 
 		// Keyframe declaration - http://stylelint.io/user-guide/rules/#keyframe-declaration
 		'keyframe-declaration-no-important': true,
@@ -101,9 +101,9 @@ module.exports = {
 			'font-size': ['px'],
 			'line-height': ['px', 'em'],
 		},
-		'declaration-property-unit-whitelist': null,
-		'declaration-property-value-blacklist': null,
-		'declaration-property-value-whitelist': null,
+		'declaration-property-unit-allowed-list': null,
+		'declaration-property-value-allowed-list': null,
+		'declaration-property-value-disallowed-list': null,
 
 		// Declaration order - https://github.com/hudochenkov/stylelint-order
 		'order/order': [
@@ -326,10 +326,10 @@ module.exports = {
 
 		// Selector - http://stylelint.io/user-guide/rules/#selector
 		'selector-attribute-brackets-space-inside': 'never',
-		'selector-attribute-operator-blacklist': null,
+		'selector-attribute-operator-allowed-list': null,
+		'selector-attribute-operator-disallowed-list': null,
 		'selector-attribute-operator-space-after': 'never',
 		'selector-attribute-operator-space-before': 'never',
-		'selector-attribute-operator-whitelist': null,
 		'selector-class-pattern': null,
 		'selector-combinator-space-after': 'always',
 		'selector-combinator-space-before': 'always',
@@ -345,11 +345,11 @@ module.exports = {
 		}],
 		'selector-max-universal': 0,
 		'selector-no-vendor-prefix': true,
-		'selector-pseudo-class-blacklist': null,
+		'selector-pseudo-class-allowed-list': null,
 		'selector-pseudo-class-case': 'lower',
+		'selector-pseudo-class-disallowed-list': null,
 		'selector-pseudo-class-no-unknown': true,
 		'selector-pseudo-class-parentheses-space-inside': 'never',
-		'selector-pseudo-class-whitelist': null,
 		'selector-pseudo-element-case': 'lower',
 		'selector-pseudo-element-colon-notation': 'single',
 		'selector-pseudo-element-no-unknown': true,
@@ -371,11 +371,11 @@ module.exports = {
 		// Media feature - http://stylelint.io/user-guide/rules/#media-feature
 		'media-feature-colon-space-after': 'always',
 		'media-feature-colon-space-before': 'never',
-		'media-feature-name-blacklist': null,
+		'media-feature-name-allowed-list': null,
 		'media-feature-name-case': 'lower',
+		'media-feature-name-disallowed-list': null,
 		'media-feature-name-no-unknown': true,
 		'media-feature-name-no-vendor-prefix': true,
-		'media-feature-name-whitelist': null,
 		'media-feature-parentheses-space-inside': 'never',
 		'media-feature-range-operator-space-after': 'always',
 		'media-feature-range-operator-space-before': 'always',
@@ -390,7 +390,8 @@ module.exports = {
 		'media-query-list-comma-space-before': 'never',
 
 		// At-rule - http://stylelint.io/user-guide/rules/#at-rule
-		'at-rule-blacklist': null,
+		'at-rule-allowed-list': null,
+		'at-rule-disallowed-list': null,
 		'at-rule-empty-line-before': ['always', {
 			ignore: ['after-comment', 'blockless-after-blockless', 'inside-block'],
 			ignoreAtRules: ['else'],
@@ -402,16 +403,15 @@ module.exports = {
 		'at-rule-no-vendor-prefix': true,
 		'at-rule-semicolon-newline-after': 'always',
 		'at-rule-semicolon-space-before': 'never',
-		'at-rule-whitelist': null,
 
 		// Comment - http://stylelint.io/user-guide/rules/#comment
 		'comment-no-empty': true,
 		'comment-empty-line-before': null,
 		'comment-whitespace-inside': 'always',
-		'comment-word-blacklist': null,
+		'comment-word-disallowed-list': null,
 
 		// General / Sheet - http://stylelint.io/user-guide/rules/#general--sheet
-		'indentation': 'tab',
+		indentation: 'tab',
 		'max-empty-lines': 2,
 		'max-line-length': null, // TODO: enable when single line comments are supported
 		'max-nesting-depth': 3,
