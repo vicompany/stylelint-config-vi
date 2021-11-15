@@ -46,8 +46,8 @@ module.exports = {
 };
 ```
 Add the [language identifiers](https://code.visualstudio.com/docs/languages/overview#_language-identifier) you want to validate  using the `stylelint.validate` option:
-1. To the **Workspace Settings**: `Ctrl+Shift+P` and select `Preferences: Open Workspace Settings (JSON)`
-2. Or **User settings**: `Ctrl+Shift+P` and select `Preferences: Open Settings (JSON)`
+1. To the **Workspace Settings**: `Ctrl+Shift+P` and select **Preferences: Open Workspace Settings (JSON)**
+2. Or **User settings**: `Ctrl+Shift+P` and select **Preferences: Open Settings (JSON)`**
 
 ### Example VS Code config
 ```json
