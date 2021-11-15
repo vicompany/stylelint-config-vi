@@ -27,7 +27,7 @@ If you use Stylelint to lint anything other than CSS files, you will need to ins
 
 ### SCSS
 
-First, install the [PostCSS SCSS Syntax](https://github.com/postcss/postcss-scss):
+Install the [PostCSS SCSS Syntax](https://github.com/postcss/postcss-scss):
 
     npm i postcss postcss-scss -D
 
@@ -45,20 +45,22 @@ module.exports = {
 	]
 };
 ```
-And finally update your VS Code config.
+Add the [language identifiers](https://code.visualstudio.com/docs/languages/overview#_language-identifier) you want to validate  using the `stylelint.validate` option:
+1. To the **Workspace Settings**: `Ctrl+Shift+P` and select `Preferences: Open Workspace Settings (JSON)`
+2. Or **User settings**: `Ctrl+Shift+P` and select `Preferences: Open Settings (JSON)`
 
-### .vscode > settings.json
+### Example VS Code config
 ```json
 {
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": ["css", "postcss", "scss"]
 }
 ```
 
 ### Vue.js
 
-First, install the [PostCSS HTML Syntax](https://github.com/gucong3000/postcss-html):
+Install the [PostCSS HTML Syntax](https://github.com/gucong3000/postcss-html):
 
-    npm i postcss postcss-html -D
+    npm i postcss-html -D
 
 Update your `.stylelintrc.js` file
 
@@ -74,12 +76,14 @@ module.exports = {
 	]
 };
 ```
-And finally update your VS Code config.
+Add the [language identifiers](https://code.visualstudio.com/docs/languages/overview#_language-identifier) you want to validate  using the `stylelint.validate` option:
+1. To the **Workspace Settings**: `Ctrl+Shift+P` and select `Preferences: Open Workspace Settings (JSON)`
+2. Or **User settings**: `Ctrl+Shift+P` and select `Preferences: Open Settings (JSON)`
 
-### .vscode > settings.json
+### Example VS Code config
 ```json
 {
-  "stylelint.validate": ["css", "vue"]
+  "stylelint.validate": ["css", "postcss", "vue"]
 }
 ```
 
