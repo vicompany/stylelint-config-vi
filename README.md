@@ -37,12 +37,12 @@ Update your `.stylelintrc.js` file
 ```js
 module.exports = {
   extends: 'stylelint-config-vi',
-	overrides: [
-		{
-			files: ['**/*.scss'],
-			customSyntax: 'postcss-scss'
-		}
-	]
+  overrides: [
+    {
+      files: ['**/*.scss'],
+      customSyntax: 'postcss-scss',
+    },
+  ],
 };
 ```
 Add the [language identifiers](https://code.visualstudio.com/docs/languages/overview#_language-identifier) you want to validate  using the `stylelint.validate` option:
@@ -68,12 +68,12 @@ Update your `.stylelintrc.js` file
 ```js
 module.exports = {
   extends: 'stylelint-config-vi',
-	overrides: [
-		{
-			files: ['**/*.vue'],
-			customSyntax: 'postcss-html'
-		}
-	]
+  overrides: [
+    {
+      files: ['**/*.vue'],
+      customSyntax: 'postcss-html',
+    },
+  ],
 };
 ```
 Add the [language identifiers](https://code.visualstudio.com/docs/languages/overview#_language-identifier) you want to validate  using the `stylelint.validate` option:
